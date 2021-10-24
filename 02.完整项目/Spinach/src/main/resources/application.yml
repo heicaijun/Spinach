@@ -1,0 +1,23 @@
+#tomcat相关
+server:
+  port: 8080
+#数据库连接信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://www.heicaijun.cn:3306/Spinach?useUnicode=true&characterEncoding=utf-8
+    username: spinach
+    password: csh.970213
+  # 配置静态路径
+  mvc:
+    static-path-pattern: /static/**
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+
+# 配置Mybatis信息
+mybatis:
+#  pojo别名扫描包
+  type-aliases-package: cn.heicaijun.spinach.entity
+#  加载Mybatis映射文件
+  mapper-locations: classpath:mapper/*Mapper.xml

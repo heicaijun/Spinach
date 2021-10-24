@@ -1,0 +1,226 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: chenshihao3
+  Date: 2021/10/20
+  Time: 19:32
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<jsp:include page="header.jsp" flush="true"/>
+    <!-- Switchery css -->
+    <link href="/static/assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome CSS -->
+    <link href="/static/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="/static/assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- BEGIN CSS for this page -->
+    <link href="/static/assets/plugins/lightbox/ekko-lightbox.css" rel="stylesheet" />
+    <!-- END CSS for this page -->
+
+</head>
+
+<body class="adminbody">
+
+<div id="main">
+
+    <jsp:include page="topNavigation.jsp" flush="true"/>
+
+
+    <jsp:include page="leftSidebar.jsp" flush="true"/>
+
+    <div class="content-page">
+
+        <!-- Start content -->
+        <div class="content">
+
+            <div class="container-fluid">
+
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="breadcrumb-holder">
+                            <h1 class="main-title float-left">活动展示</h1>
+                            <ol class="breadcrumb float-right">
+                                <li class="breadcrumb-item">活动</li>
+                                <li class="breadcrumb-item active">活动展示</li>
+                            </ol>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <h3><i class="fa fa-image"></i> 乒乓球协会第四次活动</h3>
+                                2021-9-23 | 18:30 ~ 20:00 | 地点：t4宿舍食堂3楼乒乓球馆 | 参与人员：刘诚,苟正斌,王文畅,孙鑫凯,陈世豪,杜超,李元元,曹良宇,张炯
+                            </div>
+
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <a href="static/images/pingpang/21_9_23/IMG_20210923_184455.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/pingpang/21_9_23/IMG_20210923_184455.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/pingpang/21_9_23/IMG_20210923_184456.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/pingpang/21_9_23/IMG_20210923_184456.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/pingpang/21_9_23/IMG_20210923_184503.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/pingpang/21_9_23/IMG_20210923_184503.jpg" class="img-fluid">
+                                    </a>
+
+                                    <a href="static/images/pingpang/21_9_23/IMG_20210923_184505.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/pingpang/21_9_23/IMG_20210923_184505.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/pingpang/21_9_23/IMG_20210923_184509.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/pingpang/21_9_23/IMG_20210923_184509.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/pingpang/21_9_23/IMG_20210923_184931.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/pingpang/21_9_23/IMG_20210923_184931.jpg" class="img-fluid">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- end card-->
+                    </div>
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <h3><i class="fa fa-image"></i> 羽毛球协会第二次活动</h3>
+                                2021-9-16 | 19:00 ~ 20:30 | 地点：光谷羽毛球馆 | 参与人员：周永磊,肖晓,刘朗,安艳丽,陈韬,付敏
+                            </div>
+
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <a href="static/images/badminton/21_9_16/20210916_1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/badminton/21_9_16/20210916_1.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/badminton/21_9_16/20210916_02.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/badminton/21_9_16/20210916_02.jpg" class="img-fluid">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- end card-->
+                    </div>
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <h3><i class="fa fa-image"></i> 台球协会第二次活动</h3>
+                                2021-9-14 | 18:30 ~ 20:00 | 地点：t4宿舍食堂2楼台球场地 | 参与人员：杜超,李元元,邹友,付敏,周永磊,刘诚,曹良宇
+                            </div>
+
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <a href="static/images/billiards/21_9_14/教学照片.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/billiards/21_9_14/教学照片.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/billiards/21_9_14/教学照片2.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/billiards/21_9_14/教学照片2.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/billiards/21_9_14/活动照片1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/billiards/21_9_14/活动照片1.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/billiards/21_9_14/活动照片2.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/billiards/21_9_14/活动照片2.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/billiards/21_9_14/活动照片3.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/billiards/21_9_14/活动照片3.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/billiards/21_9_14/活动照片7.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/billiards/21_9_14/活动照片7.jpg" class="img-fluid">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- end card-->
+                    </div>
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <h3><i class="fa fa-image"></i> 篮球协会第二次活动</h3>
+                                2021-9-10 | 18:00 ~ 20:00 | 地点：t4宿舍区篮球场 | 参与人员：张炯,刘朗,陈小刚,方俊,盛琅,周超群,华振乾,周永磊,孙宇
+                            </div>
+
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <a href="static/images/basketball/21_9_10/IMG_20210910_181710.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/basketball/21_9_10/IMG_20210910_181710.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/basketball/21_9_10/IMG_20210910_181737.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/basketball/21_9_10/IMG_20210910_181737.jpg" class="img-fluid">
+                                    </a>
+                                    <a href="static/images/basketball/21_9_10/IMG_20210910_192858.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-2">
+                                        <img alt="image" src="static/images/basketball/21_9_10/IMG_20210910_192858.jpg" class="img-fluid">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div><!-- end card-->
+                    </div>
+
+
+                </div>
+            <!-- END container-fluid -->
+
+        </div>
+        <!-- END content -->
+
+    </div>
+    <!-- END content-page -->
+
+    <jsp:include page="footer.jsp" flush="true"/>
+
+
+</div>
+<!-- END main -->
+
+<script src="/static/assets/js/modernizr.min.js"></script>
+<script src="/static/assets/js/jquery.min.js"></script>
+<script src="/static/assets/js/moment.min.js"></script>
+
+<script src="/static/assets/js/popper.min.js"></script>
+<script src="/static/assets/js/bootstrap.min.js"></script>
+
+<script src="/static/assets/js/detect.js"></script>
+<script src="/static/assets/js/fastclick.js"></script>
+<script src="/static/assets/js/jquery.blockUI.js"></script>
+<script src="/static/assets/js/jquery.nicescroll.js"></script>
+<script src="/static/assets/js/jquery.scrollTo.min.js"></script>
+<script src="/static/assets/plugins/switchery/switchery.min.js"></script>
+
+<!-- App js -->
+<script src="/static/assets/js/pikeadmin.js"></script>
+
+<!-- BEGIN Java Script for this page -->
+<script src="/static/assets/plugins/lightbox/ekko-lightbox.min.js"></script>
+<script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+</script>
+<!-- END Java Script for this page -->
+
+</body>
+</html>
