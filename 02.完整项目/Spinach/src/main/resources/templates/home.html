@@ -1,11 +1,14 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: chenshihao3
-  Date: 2021/10/20
-  Time: 14:55
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spinach 全民健身</title>
+<meta name="description" content="">
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/assets/images/favicon.ico">
 
     <!-- Bootstrap CSS -->
     <link href="static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -26,10 +29,10 @@
 
 <div id="main">
 
-    <jsp:include page="topNavigation.jsp" flush="true"/>
+    <div th:replace="~{topNavigation :: #topNav}"></div>
 
 
-    <jsp:include page="leftSidebar.jsp" flush="true"/>
+    <div th:replace="~{leftSidebar :: #leftSide}"></div>
 
     <div class="content-page">
 
@@ -53,7 +56,7 @@
                 <!-- end row -->
 
 
-<%--             羽毛球信息--%>
+
                 <div class="row">
                     <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
                         <div class="card-box noradius noborder bg-default">
@@ -65,7 +68,6 @@
                             <span class="text-white">上周活跃人次</span>
                         </div>
                     </div>
-<%--                乒乓球信息--%>
                     <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
                         <div class="card-box noradius noborder bg-warning">
                             <i class="fa float-right" style="margin-top: 0px">
@@ -76,7 +78,6 @@
                             <span class="text-white">上周活跃人次</span>
                         </div>
                     </div>
-<%--                    台球信息--%>
                     <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
                         <div class="card-box noradius noborder bg-success">
                             <i class="fa float-right" style="margin-top: 0px">
@@ -88,7 +89,6 @@
                         </div>
                     </div>
 
-                    <%--                    篮球信息--%>
                     <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
                         <div class="card-box noradius noborder bg-danger">
                             <i class="fa float-right" style="margin-top: 0px">
@@ -384,7 +384,7 @@
     <!-- END content-page -->
 
 
-    <jsp:include page="footer.jsp" flush="true"/>
+    <div th:replace="~{footer :: copy}"></div>
 
 </div>
 <!-- END main -->
@@ -429,12 +429,13 @@
 <script>
     var ctx1 = document.getElementById("lineChart").getContext('2d');
     var lineChart = new Chart(ctx1, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: ["20-10", "20-11", "20-12", "21-01", "21-02", "21-03", "21-04", "21-05", "21-06", "21-07", "21-08", "21-09"],
             datasets: [{
                 label: '活跃人次',
-                backgroundColor: '#3EB9DC',
+                borderColor: '#3EB9DC',
+                backgroundColor : 'rgba(0,255,255,0)',
                 data: [107, 108, 102, 110, 130, 95, 101, 98, 131, 110, 128, 104]
             }]
 

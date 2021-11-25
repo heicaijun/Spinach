@@ -8,6 +8,7 @@
         <version>2.5.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>cn.heicaijun</groupId>
     <artifactId>Spinach</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -15,6 +16,7 @@
     <description>Spinach</description>
     <properties>
         <java.version>1.8</java.version>
+
     </properties>
 
     <dependencies>
@@ -41,23 +43,16 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-<!--    自动重启Spring Boot-->
+<!--    自动重启Spring Boot，按Ctrl+F9重新编译就立马重启-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
-<!--        加入对jsp的支持-->
+<!--     添加Themleaf依赖-->
         <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <!--jsp页面使用jstl标签-->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 <!--        用于文件上传-->
         <dependency>
@@ -70,8 +65,24 @@
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
         </dependency>
+<!--    可以使用注解来对Bean进行快速开发
+        @Data来增加getter和setter，
+        @ToString来增加toString方法
+        @NoArgsConstructor创建无参构造器
+        @AllArgsConstructor创建有参构造器
+        @EqualsAndHashCode:创建Equals和HashCode方法
+        @Slf4j:创建log日志-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
 
-
+<!--        用于对我们自己写的配置类，在yml中可以支持提示-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <build>
@@ -79,8 +90,35 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+                <configuration>
+                    <mainClass>cn.heicaijun.spinach.SpinachApplication</mainClass>
+                    <excludes>
+<!--                        在打包时，排除了多余的包-->
+                        <exclude>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-configuration-processor</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <!-- spring热部署 -->
+                    <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>springloaded</artifactId>
+                        <version>1.2.6.RELEASE</version>
+                    </dependency>
+                </dependencies>
+
+        </plugin>
         </plugins>
+
     </build>
 
 </project>

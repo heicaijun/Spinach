@@ -1,13 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: chenshihao3
-  Date: 2021/10/20
-  Time: 21:23
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<jsp:include page="header.jsp" flush="true"/>
+    <title>Spinach 全民健身</title>
+    <meta name="description" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/assets/images/favicon.ico">
+
     <!-- Switchery css -->
     <link href="static/assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
 
@@ -30,11 +32,10 @@
 
 <div id="main">
 
+    <div th:replace="~{topNavigation :: #topNav}"></div>
 
-    <jsp:include page="topNavigation.jsp" flush="true"/>
 
-
-    <jsp:include page="leftSidebar.jsp" flush="true"/>
+    <div th:replace="~{leftSidebar :: #leftSide}"></div>
 
 
 
@@ -614,7 +615,7 @@
     </div>
     <!-- END content-page -->
 
-    <jsp:include page="footer.jsp" flush="true"/>
+    <div th:replace="~{footer :: copy}"></div>
 </div>
 <!-- END main -->
 

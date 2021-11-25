@@ -1,6 +1,8 @@
 #tomcat相关
 server:
   port: 8080
+  servlet:
+    context-path: "/"
 #数据库连接信息
 spring:
   datasource:
@@ -10,14 +12,20 @@ spring:
     password: csh.970213
   # 配置静态路径
   mvc:
+#    默认是无前缀的，当我们加上/static/** 后只能通过 域名/static/**来访问了
     static-path-pattern: /static/**
-    view:
-      prefix: /WEB-INF/
-      suffix: .jsp
+    hiddenmethod:
+      filter:
+        enabled: true # 开启页面表单的Rest功能
+  servlet:
+    multipart:
+#      上传文件的限值大小
+      max-file-size: 5MB
 
 # 配置Mybatis信息
 mybatis:
 #  pojo别名扫描包
-  type-aliases-package: cn.heicaijun.spinach.entity
+  typ e-aliases-package: cn.heicaijun.spinach.entity
 #  加载Mybatis映射文件
   mapper-locations: classpath:mapper/*Mapper.xml
+
